@@ -1,0 +1,120 @@
+/* Font Family */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+/* End of Font Family */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+
+html {
+  font-size: 81.25%;
+}
+
+body {
+  height: 100%;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  background-color: hsl(210, 46%, 95%);
+}
+/* Using Not */
+.grid > div:not(.white-bg) {
+  color: #fff;
+}
+/* End of Using Not */
+
+.container {
+  height: 100%;
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 0 2.4rem;
+}
+
+.flex-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  height: 90%;
+  margin: 5% 0;
+  /* font-size: clamp(0.3rem, 0.9vw, 1.2rem); */
+  display: grid;
+  grid-template: repeat(2, 1.2fr) / repeat(4, 1fr);
+  gap: 1.8rem;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1.8rem; */
+  /* justify-content: space-between; */
+  padding: 1rem;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 0.6rem;
+}
+
+.testimonial-daniel {
+  background: url("./images/bg-pattern-quotation.svg"),
+    linear-gradient(45deg, hsl(263, 55%, 52%), hsl(217, 19%, 35%)) 90%;
+  /* background-size: cover; */
+  background-repeat: no-repeat;
+  grid-column: 1 / span 2;
+  grid-row: 1;
+}
+
+.testimonial-jeanette {
+  background-color: hsl(0, 0%, 100%);
+  grid-row: 2;
+  grid-column: 1;
+}
+.testimonial-patrick {
+  background-color: hsl(219, 29%, 14%);
+  grid-row: 2;
+  grid-column: 2 / span 2;
+}
+
+.testimonial-kira {
+  background-color: hsl(0, 0%, 100%);
+  grid-row: 1/-1;
+  grid-column: 4;
+}
+
+.testimonial-jonathan {
+  background-color: hsl(217, 19%, 35%);
+  grid-column: 3;
+  grid-row: 1;
+}
+
+/* Inside testimonial wrapper */
+.client-details {
+  display: flex;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.client-details img {
+  width: 3.2rem;
+  border-radius: 2.4rem;
+}
+
+.client-details .verified {
+  color: hsl(0, 0%, 50%);
+}
+
+.header-description {
+  margin: 1.2rem 0;
+  font-size: 1.3rem;
+}
+
+.summary-quote {
+  color: hsl(0, 0%, 70%);
+  line-height: 1.8;
+}
